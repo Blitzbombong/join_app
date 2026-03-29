@@ -6,9 +6,9 @@ function generateBoardHTML() {
             <div class="flex inputPlusBtn">
                 <div class="boardInputBox">
                     <input id="find_task" onkeyup="searchTaskFromInput()" class="inputFindTask" type="text" placeholder="Find Task">
-                    <img src="../images/search.svg">
+                    <img src="images/search.svg">
                 </div>
-                <button onclick="renderAddTaskPopUp()" class="addTaskBtn"><span class="addBtnText">Add task</span><img src="../images/add.svg"></button>
+                <button onclick="renderAddTaskPopUp()" class="addTaskBtn"><span class="addBtnText">Add task</span><img src="images/add.svg"></button>
             </div>
         </div>
         <div id="width_HTML"></div>
@@ -93,11 +93,11 @@ function renderTaskHTMLDetails(task) {
             </div>
             <div class="editOptionsDetailsContain">
                 <div onclick="confirmTaskDeletion(${task.id}, '${task.title}')" class="deleteDetailsContain">
-                    <img src="../images/delete.svg"><span>Delete</span>
+                    <img src="images/delete.svg"><span>Delete</span>
                 </div>
                 <div class="seperator"></div>
                 <div onclick="renderEditTaskInBordSite(${task.id})" class="editDetailsContain">
-                    <img src="../images/edit.svg"><span>Edit</span>
+                    <img src="images/edit.svg"><span>Edit</span>
                 </div>
             </div>
         </div>
@@ -107,7 +107,7 @@ function renderTaskHTMLDetails(task) {
 function returnEditTaskHTML(task) {
     return `
     <div class="flex_end">
-        <img onclick= "closeTask()" class="closeWindowImage" src="../images/close.svg">
+        <img onclick= "closeTask()" class="closeWindowImage" src="images/close.svg">
     </div>
     <form onsubmit= "editTask(${task.id},'${task.title}', '${task.description}', '${task.date}', '${task.priority}', '${task.category}', '${task.status}'); return false" class="edit-task-container">
     <div class="mobile-scroll">
@@ -128,7 +128,7 @@ function returnEditTaskHTML(task) {
                                 placeholder="Enter a Description" spellcheck>${task.description}</textarea>
                         </div>
                         <div>
-                            <img class="description-icon" src="../images/Recurso 1 1.svg" alt="">
+                            <img class="description-icon" src="images/Recurso 1 1.svg" alt="">
                         </div>
                     </div>
                 </div>
@@ -137,7 +137,7 @@ function returnEditTaskHTML(task) {
                     <div onclick="toggleContacts(event)" class="custom-dropdown">
                         <input onkeyup="searchContactToAssign()" id="assignTo-input" class="assign-input" type="search" placeholder="Select contacts to assign">
                         <div class="assign-button">
-                            <img onclick="rotateIcon()" src="../images/arrow_drop_downaa.svg" alt="Arrow Icon" id="arrowIcon">
+                            <img onclick="rotateIcon()" src="images/arrow_drop_downaa.svg" alt="Arrow Icon" id="arrowIcon">
                         </div>
                     </div>
                     <div class="contact-container d-none" id="contactContainer">
@@ -149,7 +149,7 @@ function returnEditTaskHTML(task) {
                                 </div>
                                 <div>
                                     <div class="check-button">
-                                        <img src="../images/Rectangle 5.svg" alt="">
+                                        <img src="images/Rectangle 5.svg" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -176,11 +176,11 @@ function returnEditTaskHTML(task) {
                     <h4>Prio</h4>
                     <div class="button-selection">
                         <div class="prio-button" id="buttonUrgent" onclick="changeButtonStyles('Urgent')">Urgent
-                            <img class="prio-image" id="iconUrgent" src="../images/capa 2.svg" alt=""></div>
+                            <img class="prio-image" id="iconUrgent" src="images/capa 2.svg" alt=""></div>
                         <div class="prio-button selected" id="buttonMedium" onclick="changeButtonStyles('Medium')">Medium
-                            <img class="prio-image" id="iconMedium" src="../images/prio media.svg" alt=""></div>
+                            <img class="prio-image" id="iconMedium" src="images/prio media.svg" alt=""></div>
                         <div class="prio-button" id="buttonLow" onclick="changeButtonStyles('Low')">Low <img
-                            class="prio-image" id="iconLow" src="../images/prio baja.svg" alt=""></div>
+                            class="prio-image" id="iconLow" src="images/prio baja.svg" alt=""></div>
                     </div>
                 </div>
                 <div class="subtask-container">
@@ -190,11 +190,11 @@ function returnEditTaskHTML(task) {
                             <input oninput="showSubtaskImagesByInput()" id="subtaskInput" class="subtask-input" type="text" name="myInput" placeholder="Add new subtask">
                         </div>
                         <div class="subtask-image-field-first" id="imageContainer">
-                            <img src="../images/Property 1=add.svg" alt="" onclick="toggleSubtaskImages()">
+                            <img src="images/Property 1=add.svg" alt="" onclick="toggleSubtaskImages()">
                         </div>
                         <div class="subtask-image-field-second d-none" id="newImages">
-                            <img id="closeImag" onclick="toggleSubtaskImages()" class="subtask-button-close" src="../images/Property 1=close.svg" alt="">
-                            <img id="checkImage" class="subtask-button-check" src="../images/Property 1=check.svg" alt="" onclick="addSubtasksOnAlreadyCreatedTaks(${task.id})">
+                            <img id="closeImag" onclick="toggleSubtaskImages()" class="subtask-button-close" src="images/Property 1=close.svg" alt="">
+                            <img id="checkImage" class="subtask-button-check" src="images/Property 1=check.svg" alt="" onclick="addSubtasksOnAlreadyCreatedTaks(${task.id})">
                         </div>
                     </div>
                     <div class="subtask-content" id="subtaskContent"></div>
@@ -203,7 +203,7 @@ function returnEditTaskHTML(task) {
         </div>
     </div>
     <div class="edit_task_button">
-        <button type="submit" class="create-button">Ok<img class="clear-create-img" src="../images/check.svg" alt=""></button>   
+        <button type="submit" class="create-button">Ok<img class="clear-create-img" src="images/check.svg" alt=""></button>   
     </div>
 </form>
     `
@@ -237,15 +237,15 @@ function returnTaskCategorySmallHTML(category, formattedCategory) {
 }
 
 function returnTaskCategoryBigHTML(category, formattedCategory) {
-    return `<h2 class="taskCategoryBig ${category}">${formattedCategory}</h2><img class="closeWindowImage" src="../images/close.svg" onclick="closeTask()"></img>`;
+    return `<h2 class="taskCategoryBig ${category}">${formattedCategory}</h2><img class="closeWindowImage" src="images/close.svg" onclick="closeTask()"></img>`;
 }
 
 function returnTaskPrioritySmallHTML(priority) {
-    return `<img src="../images/${priority}.svg">`
+    return `<img src="images/${priority}.svg">`
 }
 
 function returnTaskPriorityBigHTML(priority) {
-    return `<span>${priority}</span> <img src="../images/${priority}.svg">`
+    return `<span>${priority}</span> <img src="images/${priority}.svg">`
 }
 
 function returnAddBtnSVG(status) {
@@ -336,9 +336,9 @@ function returnSubtasksDetailsHTML(subtaskId, subtask, taskId) {
     let imageHTML;
 
     if (subtask.subtaskStatus === 'finished') {
-        imageHTML = `<img id="checkedBox${subtaskId}${taskId}" src="../images/checked_button.svg">`;
+        imageHTML = `<img id="checkedBox${subtaskId}${taskId}" src="images/checked_button.svg">`;
     } else {
-        imageHTML = `<img id="checkBox${subtaskId}${taskId}" src="../images/check_button.svg">`;
+        imageHTML = `<img id="checkBox${subtaskId}${taskId}" src="images/check_button.svg">`;
     }
 
     return /*html*/`

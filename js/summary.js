@@ -22,15 +22,22 @@ async function renderSummary() {
  * @returns {string} if no deadline available
  */
 function renderNextDeadlineDate() {
-    let allDeadlines = tasks.map(tasks => new Date(tasks.date));
-    if(allDeadlines.length > 0){
-        let futureDates =  allDeadlines.filter(date => date >= new Date());
+    let allDeadlines = tasks.map(t => new Date(t.date)); // t statt tasks als Variable nutzen (sauberer)
+    
+    if (allDeadlines.length > 0) {
+        let futureDates = allDeadlines.filter(date => date >= new Date());
         futureDates.sort((a, b) => a - b);
-        let nextDeadline = futureDates[0]
-        nextDeadline = formatDeadlinedate(nextDeadline);
-        return nextDeadline;
-    }else{
-        return 'No Current Deadline';
+        
+        let nextDeadline = futureDates[0];
+
+        // CHECK: Haben wir wirklich ein zukünftiges Datum gefunden?
+        if (nextDeadline) {
+            return formatDeadlinedate(nextDeadline);
+        } else {
+            return 'No Upcoming Deadline';
+        }
+    } else {
+        return 'No Current Tasks';
     }  
 }
 

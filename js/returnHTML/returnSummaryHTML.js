@@ -8,7 +8,7 @@ function generateSummaryHTML() {
                 <h1>Join 360</h1>
                 <div class="summary_subtitle_ctn">
                     <div class="vector_ctn">
-                        <img src="../images/Vector 5.svg" alt="">
+                        <img src="images/Vector 5.svg" alt="">
                     </div>
                     <span>Key Metrics at a Glance</span>
                 </div>
@@ -19,14 +19,14 @@ function generateSummaryHTML() {
             <section class="summary_section_left">
                 <div class="summary_start_row">
                     <div onclick="renderBoard()" id="to-do-thumbnail" class="summary_start_row_thumbnails">
-                        <img src="../images/to_do_thumbnail.svg" alt="">
+                        <img src="images/to_do_thumbnail.svg" alt="">
                         <div class="flex_colum_align_center">
                             <span id="to-do-task-number" class="summary_digits">${filterAndReturnTaskCount('to_do')}</span>
                             <span class="font_20px">To-Do</span>
                         </div>
                     </div>
                     <div onclick="renderBoard()" id="done-thumbnail" class="summary_start_row_thumbnails">
-                        <img src="../images/done_thumbnail.svg" alt="">
+                        <img src="images/done_thumbnail.svg" alt="">
                         <div class="flex_colum_align_center">
                             <span id="done-tasks-number" class="summary_digits">${filterAndReturnTaskCount('done')}</span>
                             <span class="font_20px">Done</span>
@@ -36,7 +36,7 @@ function generateSummaryHTML() {
                 <div onclick="renderBoard()" class="summary_second_row">
                     <div class="second_row_left_section">
                         <div class="prio_circle">
-                            <img src="../images/summary_prio_alta.svg" alt="">
+                            <img src="images/summary_prio_alta.svg" alt="">
                         </div>
                         <div class="flex_colum_align_center">
                             <span class="summary_digits">${filterAndReturnUrgentTasks()}</span>
@@ -44,7 +44,7 @@ function generateSummaryHTML() {
                         </div>
                     </div>
                     <div class="summary_second_row_separator_ctn">
-                        <img src="../images/summary_second_row_vector.svg" alt="">
+                        <img src="images/summary_second_row_vector.svg" alt="">
                     </div>
                     <div class="second_row_right_section">
                         <span id="current-date-summary">${renderNextDeadlineDate()}</span>
