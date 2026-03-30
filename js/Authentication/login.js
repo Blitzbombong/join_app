@@ -17,7 +17,7 @@ async function initLogin() {
  */
 function logOut() {
     localStorage.removeItem('currentUser');
-    window.location.href = './login.html';
+    window.location.href = 'login.html';
 }
 
 /**
@@ -46,12 +46,12 @@ function loginValidation(user, password) {
         localStorage.setItem('hasBeenGreeted', false);
         setCurrentUser(user);
         rememberMe();
-        window.location.href = '../HTML/index.html';
+        window.location.href = 'index.html';
     } else if (user && !password) {
         showPasswordError();
     } else {
         showNoUserError();
-        setTimeout(() => window.location.href = '../HTML/sign_up.html', 3000);
+        setTimeout(() => window.location.href = 'sign_up.html', 3000);
     }
 }
 
@@ -76,7 +76,7 @@ function setCurrentUser(user) {
 function guestLogin(e) {
     e.preventDefault();
     localStorage.setItem('hasBeenGreeted', false);
-    window.location.href = "../HTML/index.html";
+    window.location.href = "index.html";
 }
 
 /**

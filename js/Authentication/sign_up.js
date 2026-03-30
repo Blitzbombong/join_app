@@ -20,7 +20,7 @@ async function signUp() {
         await setItem('users', JSON.stringify(users));
         resetForm();
         showSignUpConfirmation();
-        setTimeout(() => window.location.href = "../HTML/login.html", 2000);
+        setTimeout(() => window.location.href = "login.html", 2000);
     }
 }
 
